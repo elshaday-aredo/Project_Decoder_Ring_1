@@ -84,7 +84,7 @@ const polybiusModule = (function () {
       })
       return encoding.join("")
 
-    } else if(!encode) {
+    } else {
         let decoding = input.match(/[0-9]{2}|\s/g).map((character) => {
           if(!decodingAlpha[character]){return " "}
           let numberToLetter = decodingAlpha[character]

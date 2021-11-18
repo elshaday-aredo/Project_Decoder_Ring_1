@@ -3,7 +3,7 @@ const { polybius } = require("../src/polybius.js");
 
 describe("function polybius(input, encode = true)", () => {
     it("should return a string", () => {
-        const actual = polybius("thinkful", true)
+        const actual = polybius("thinkful")
         expect(actual).to.be.a("string")
     });
     it("should ignore capital letters", () => {
@@ -15,6 +15,9 @@ describe("function polybius(input, encode = true)", () => {
         const actual = polybius("hello world", true)
         const expected = "3251131343 2543241341"
         expect(actual).to.equal(expected)
+        const actualTwo = polybius("3251131343 2543241341", false)
+        const expectedTwo = "hello world"
+        expect(actualTwo).to.equal(expectedTwo)
     });
     it("the number of characters in the string excluding spaces should be even. Otherwise, return false.", () => {
         const actual = polybius("44324233521254134", false)

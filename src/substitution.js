@@ -28,7 +28,7 @@ const substitutionModule = (function () {
      return alpha[indexNumber]
       })
       return decoding.join("")
-    } else if(encode) {
+    } else {
       const encoding = input.map((character) => {
         if(character == " ") {return " "}
         const indexNumber = alpha.indexOf(character)

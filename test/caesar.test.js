@@ -29,10 +29,10 @@ describe("function caesar(input, shift, encode = true)", () => {
         expect(actualNegativeShift).to.equal(expectedNegativeShift)
     })
     it("should return a decoded message", () => {
-        const actual = caesar("F tfii mxpp qefkhcri!", 3)
+        const actual = caesar("F tfii mxpp qefkhcri!", -3, false)
         const expected = "i will pass thinkful!"
         expect(actual).to.equal(expected)
-        const actualNegativeShift = caesar("L qhhg wr sdvv wklqnixo!", -3)
+        const actualNegativeShift = caesar("L qhhg wr sdvv wklqnixo!", 3, false)
         const expectedNegativeShift = "i need to pass thinkful!"
         expect(actualNegativeShift).to.equal(expectedNegativeShift)
     })

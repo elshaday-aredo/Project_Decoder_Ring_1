@@ -27,8 +27,8 @@ describe("function substitution(input, alphabet, encode = true)", () => {
         const actual = substitution("You are an excellent spy", "xoyqmcgrukswaflnthdjpzibev")
         const expected = "elp xhm xf mbymwwmfj dne"
         expect(actual).to.equal(expected)
-        const actualTwo = substitution("r droo  tizwfzgv uiln gsrmpufo lm grnv", "zyxwvutsrqponmlkjihgfedcba")
-        const expectedTwo = "i will  graduate from thinkful on time" 
+        const actualTwo = substitution("r droo tizwfzgv uiln gsrmpufo lm grnv", "zyxwvutsrqponmlkjihgfedcba", false)
+        const expectedTwo = "i will graduate from thinkful on time" 
         expect(actualTwo).to.equal(expectedTwo)
     });
 });
